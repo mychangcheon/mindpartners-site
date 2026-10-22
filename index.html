@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>마인드파트너스 — 사람과 AI가 함께 만드는 리걸테크</title>
+<meta name="description" content="주식회사 마인드파트너스는 변호사와 AI가 함께 만들고 함께 발전하는 리걸테크 회사입니다. 사건 기록을 읽고, 정리하고, 서면을 준비하는 AI 동료 「매터」를 만듭니다.">
+<meta property="og:title" content="마인드파트너스 MindPartners">
+<meta property="og:description" content="사람과 AI가 함께 만드는 리걸테크. 변호사의 AI 동료, 매터.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mindpartners.kr/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231c1b1a'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Georgia,serif' font-size='34' fill='%23f3efe8'%3E%26%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+  :root{
+    --bg:#f6f3ee; --bg2:#fbfaf7; --ink:#1c1b1a; --ink2:#4a4743; --ink3:#7a756e;
+    --line:#e3ddd3; --accent:#6b2d2d; --accent2:#9a4b45; --card:#ffffff;
+    --max:1040px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#141311; --bg2:#1b1917; --ink:#f3efe8; --ink2:#cfc8bd; --ink3:#9a938a;
+      --line:#2b2824; --accent:#d9a39a; --accent2:#c0847b; --card:#1f1c19;
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+  header{position:sticky;top:0;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);z-index:5}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;letter-spacing:-.01em}
+  .brand .mark{width:30px;height:30px;border-radius:8px;background:var(--ink);color:var(--bg);display:grid;place-items:center;font-family:Georgia,"Times New Roman",serif;font-size:19px}
+  .brand small{font-weight:500;color:var(--ink3);margin-left:4px;font-size:13px}
+  nav.links{display:flex;gap:22px;font-size:14.5px;color:var(--ink2)}
+  nav.links a{text-decoration:none}
+  nav.links a:hover{color:var(--ink)}
+  .hero{padding:96px 0 72px}
+  .eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600}
+  h1{font-size:clamp(34px,5.4vw,60px);line-height:1.12;letter-spacing:-.025em;margin:16px 0 20px;font-weight:800}
+  h1 .amp{font-family:Georgia,"Times New Roman",serif;font-style:italic;font-weight:400;color:var(--accent)}
+  .lead{font-size:clamp(17px,2vw,20px);color:var(--ink2);max-width:680px;margin:0 0 30px}
+  .cta{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--bg);text-decoration:none;padding:13px 20px;border-radius:999px;font-weight:600;font-size:15px}
+  .cta.secondary{background:transparent;color:var(--ink);border:1px solid var(--line);margin-left:10px}
+  section{padding:64px 0;border-top:1px solid var(--line)}
+  h2{font-size:clamp(24px,3vw,32px);letter-spacing:-.02em;margin:0 0 14px;font-weight:750}
+  .sub{color:var(--ink2);max-width:640px;margin:0 0 34px;font-size:17px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px}
+  .card h3{margin:0 0 8px;font-size:17px;letter-spacing:-.01em}
+  .card p{margin:0;color:var(--ink2);font-size:15px}
+  .card .n{font-family:Georgia,serif;color:var(--accent);font-size:22px;margin-bottom:10px}
+  .product{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+  .product .pill{display:inline-block;font-size:12.5px;padding:4px 10px;border-radius:999px;background:color-mix(in srgb,var(--accent) 12%,transparent);color:var(--accent);font-weight:600;margin-bottom:12px}
+  .product ul{padding-left:18px;color:var(--ink2);margin:0 0 20px}
+  .product li{margin:6px 0}
+  .matterbox{background:var(--ink);color:var(--bg);border-radius:20px;padding:34px;min-height:260px;display:flex;flex-direction:column;justify-content:space-between}
+  .matterbox .logo{font-size:40px;font-weight:800;letter-spacing:-.03em}
+  .matterbox .logo span{display:block;font-size:12px;letter-spacing:.28em;font-weight:500;opacity:.7;margin-top:2px}
+  .matterbox p{margin:0;opacity:.85;font-size:15px}
+  .how ol{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+  .how li{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
+  .how li::before{content:counter(s,decimal-leading-zero);font-family:Georgia,serif;color:var(--accent);font-size:20px;display:block;margin-bottom:8px}
+  .how b{display:block;margin-bottom:6px}
+  .how span{color:var(--ink2);font-size:15px}
+  .contact dl{display:grid;grid-template-columns:max-content 1fr;gap:10px 22px;margin:0;font-size:16px}
+  .contact dt{color:var(--ink3)}
+  .contact dd{margin:0}
+  footer{border-top:1px solid var(--line);padding:34px 0 48px;color:var(--ink3);font-size:13.5px}
+  footer .row{display:flex;flex-wrap:wrap;gap:8px 22px;justify-content:space-between;align-items:center}
+  footer a{text-decoration:none}
+  footer a:hover{color:var(--ink)}
+  @media (max-width:760px){
+    .product{grid-template-columns:1fr}
+    nav.links{display:none}
+    .hero{padding:64px 0 48px}
+    .cta.secondary{margin-left:0;margin-top:10px}
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="/"><span class="mark">&amp;</span>마인드파트너스<small>MindPartners</small></a>
+    <nav class="links">
+      <a href="#about">회사</a>
+      <a href="#matter">매터</a>
+      <a href="#how">일하는 방식</a>
+      <a href="#contact">연락처</a>
+      <a href="/notice.html">공고</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <div class="eyebrow">AI Legal Tech · Seoul</div>
+    <h1>변호사 <span class="amp">&amp;</span> AI가<br>함께 만들고, 함께 자랍니다.</h1>
+    <p class="lead">마인드파트너스는 사람의 판단과 AI의 실행력을 한 팀으로 묶는 리걸테크 회사입니다. 변호사가 쓰는 도구를 변호사와 AI가 같이 만듭니다.</p>
+    <a class="cta" href="https://matter.ai.kr" target="_blank" rel="noopener">제품 「매터」 보기 →</a>
+    <a class="cta secondary" href="#contact">연락하기</a>
+  </div>
+
+  <section id="about">
+    <div class="wrap">
+      <h2>회사</h2>
+      <p class="sub">이름의 「&amp;」는 사람과 AI, 두 지성의 동반을 뜻합니다. 법률 업무를 대신하는 회사가 아니라, 변호사가 더 깊이 보고 더 빨리 쓰도록 돕는 도구를 만드는 회사입니다.</p>
+      <div class="grid">
+        <div class="card"><div class="n">01</div><h3>변호사가 설계합니다</h3><p>사건 기록을 어떻게 읽고, 무엇을 먼저 보고, 서면을 어떤 순서로 쓰는지는 실무 변호사의 방식 그대로 설계합니다.</p></div>
+        <div class="card"><div class="n">02</div><h3>AI가 실행합니다</h3><p>판독·정리·초안처럼 시간이 드는 일은 AI 자동화 라인이 맡고, 결과는 항상 근거와 함께 돌려줍니다.</p></div>
+        <div class="card"><div class="n">03</div><h3>사람이 판단합니다</h3><p>법률 판단과 최종 책임은 변호사에게 있습니다. AI는 보조석에 앉은 동료이지, 대리인이 아닙니다.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="matter">
+    <div class="wrap product">
+      <div>
+        <span class="pill">제품</span>
+        <h2>매터 — 변호사의 AI 동료</h2>
+        <p class="sub">사건(matter) 하나를 처음부터 끝까지 함께 다루는 작업 공간입니다. 기록을 통째로 읽고 사실관계를 정리하며, 쟁점에 맞는 서면 초안을 근거와 함께 준비합니다.</p>
+        <ul>
+          <li>사건 기록 전체 분석과 사실 타임라인</li>
+          <li>사건 맥락에 맞는 서면 초안과 증거 인용</li>
+          <li>상대방 서면 반박과 리스크 점검</li>
+          <li>인용 전 판례·법령 실재 확인</li>
+          <li>스캔 기록 판독, 사건별 격리와 접근 권한</li>
+        </ul>
+        <a class="cta" href="https://matter.ai.kr" target="_blank" rel="noopener">matter.ai.kr →</a>
+      </div>
+      <div class="matterbox">
+        <div class="logo">매터<span>MATTER</span></div>
+        <p>법무법인 변호사들이 실제 사건에서 매일 쓰며 다듬고 있습니다. 변호사가 검수하고, AI가 준비합니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="how" class="how">
+    <div class="wrap">
+      <h2>일하는 방식</h2>
+      <p class="sub">제품도 같은 방식으로 만듭니다. 사람이 방향을 정하고, AI 자동화 라인이 만들고, 사람이 확인합니다.</p>
+      <ol>
+        <li><b>변호사가 요구를 정한다</b><span>실무에서 막히는 지점을 변호사가 직접 적습니다.</span></li>
+        <li><b>AI 라인이 만든다</b><span>설계·구현·검증을 AI 에이전트들이 나누어 맡아 쉬지 않고 진행합니다.</span></li>
+        <li><b>사람이 확인한다</b><span>실제 사건에서 써 보고, 틀린 것은 그날 고칩니다.</span></li>
+        <li><b>함께 자란다</b><span>변호사의 노하우는 도구에 쌓이고, 도구는 변호사의 시간을 돌려줍니다.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <h2>연락처</h2>
+      <p class="sub">제품 문의, 협업 제안, 채용 문의 모두 아래로 보내 주세요.</p>
+      <dl>
+        <dt>이메일</dt><dd><a href="mailto:contact@mindpartners.kr">contact@mindpartners.kr</a></dd>
+        <dt>회사</dt><dd>주식회사 마인드파트너스 (MindPartners Inc.)</dd>
+        <dt>소재지</dt><dd>서울</dd>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap row">
+    <div>© 2026 주식회사 마인드파트너스 · MindPartners Inc.</div>
+    <div><a href="/notice.html">공고</a> &nbsp;·&nbsp; <a href="https://matter.ai.kr" target="_blank" rel="noopener">매터</a></div>
+  </div>
+  <div class="wrap" style="margin-top:10px">법인 설립 절차 진행 중입니다. 사업자 정보는 등기 완료 후 게시합니다.</div>
+</footer>
+</body>
+</html>
